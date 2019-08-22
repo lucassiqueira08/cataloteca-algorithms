@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using Samples.Dynamic.Trainers.MulticlassClassification;
 
 namespace level
 {
@@ -6,8 +9,7 @@ namespace level
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            Console.WriteLine("Teste 123");
+            NaiveBayes.Example();
         }
     }
 }
