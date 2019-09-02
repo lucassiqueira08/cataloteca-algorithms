@@ -22,7 +22,7 @@ namespace Algorithms
 
             foreach(var p in productsList){
                 var distanceDict = LevenshteinDistance.Entrypoint(string1, p);
-                PrintMetrics(p, distanceDict["distance"], distanceDict["similarity"]);
+                PrintMetrics(p, distanceDict["distance"].ToString("0.##"), distanceDict["similarity"].ToString("0.##"));
             }
 
 
@@ -31,7 +31,7 @@ namespace Algorithms
 
         }
 
-        public static void PrintMetrics(string product, int distance, int similarity)
+        public static void PrintMetrics(string product, string distance, string similarity)
         {
             System.Console.WriteLine(' ');
             System.Console.WriteLine(' ');
