@@ -4,6 +4,6 @@ services:
     container_name: dotnet_console
     build:
       context: .
-    command: dotnet run
+    command: dotnet run -c level.csproj
     volumes:
       - .:/app
