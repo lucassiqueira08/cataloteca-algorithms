@@ -16,7 +16,11 @@ namespace level.app.LevenshteinDistance
 
         public double Distance(string reference, string element)
         {
-            var distance = reference.LevenshteinDistance(element);
+            if (reference.Length == 0 || element.Length == 0) {
+                var distance = 100.00;
+            } else {
+                var distance = reference.LevenshteinDistance(element);
+            }
             return distance;
         }
     }
