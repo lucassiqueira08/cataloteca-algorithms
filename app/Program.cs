@@ -21,7 +21,7 @@ namespace Algorithms
             };
 
             foreach(var p in productsList){
-                var distanceDict = LevenshteinDistance.Entrypoint(string1, p);
+                var distanceDict = LevenstheinDistance.Entrypoint(string1, p);
                 PrintMetrics(p, distanceDict["distance"].ToString("0.##"), distanceDict["similarity"].ToString("0.##"));
             }
 

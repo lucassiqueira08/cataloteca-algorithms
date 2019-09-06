@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using DuoVia.FuzzyStrings;
 
-public class LevenshteinDistance
+
+public class LevenstheinDistance
 {
     public static Dictionary<string, double> Entrypoint(string string1, string string2)
     {
