@@ -2,12 +2,12 @@
 
 namespace level.app.LevenshteinDistance
 {
-    public class LevenstheinInput {
+    public class Input {
 
         public string reference = string.Empty;
         public List<string> target;
 
-        public LevenstheinInput(string reference, List<string> target)
+        public Input(string reference, List<string> target)
         {
             this.reference = reference;
             this.target = target;
@@ -15,10 +15,10 @@ namespace level.app.LevenshteinDistance
             CallLevenstheinCalc(reference, target);
         }
 
-        private void CallLevenstheinCalc(string reference, List<string> target)
+        private object CallLevenstheinCalc(string reference, List<string> target)
         {
-            var levenCalc = new LevenstheinCalc(reference, target);
-            levenCalc.Calculate(reference, target);
+            var levenCalc = new Logic(reference, target);
+            return levenCalc.Calculate(reference, target);
         }
     };
 

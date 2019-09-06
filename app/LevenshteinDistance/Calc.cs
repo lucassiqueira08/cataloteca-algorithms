@@ -5,7 +5,7 @@ using System.Text;
 
 namespace level.app.LevenshteinDistance
 {
-    class LevenshteinOutputDist
+    class Calc
     {
 
         public double Similarity(double distance, double divisor)

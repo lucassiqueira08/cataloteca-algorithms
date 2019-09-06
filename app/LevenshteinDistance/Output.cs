@@ -5,12 +5,12 @@ using level.app.LevenshteinDistance;
 
 namespace level.app.LevenshteinDistance
 {
-    class LevenstheinOutput
+    class Output
     {
         private readonly string reference;
         private List<string> results;
 
-        public LevenstheinOutput(string reference, List<string> results)
+        public Output(string reference, List<string> results)
         {
             this.reference = reference;
             this.results = results;
