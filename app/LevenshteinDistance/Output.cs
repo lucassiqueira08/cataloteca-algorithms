@@ -8,9 +8,9 @@ namespace level.app.LevenshteinDistance
     class Output
     {
         private readonly string reference;
-        private List<string> results;
+        private List<ModelLev> results;
 
-        public Output(string reference, List<string> results)
+        public Output(string reference, List<ModelLev> results)
         {
             this.reference = reference;
             this.results = results;
