@@ -15,7 +15,7 @@ namespace level.app.LevenshteinDistance
             this.reference = reference;
             this.results = results;
             System.Console.WriteLine(reference);
-            System.Console.WriteLine(results);
+            results.ForEach(Console.WriteLine);
         }
     }
 }

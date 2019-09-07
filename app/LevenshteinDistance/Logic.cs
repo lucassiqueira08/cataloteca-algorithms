@@ -22,6 +22,7 @@ namespace level.app.LevenshteinDistance
             List<ModelLev> result = new List<ModelLev>();
 
             Console.WriteLine("Ambos");
+            Console.WriteLine("--------------------");
             foreach (string element in target)
             {
                 divisor = GetDivisor(reference, element);

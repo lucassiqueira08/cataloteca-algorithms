@@ -12,14 +12,14 @@ namespace level.app.LevenshteinDistance
             this.reference = reference;
             this.target = target;
 
-            var calc = CallLevenstheinCalc(reference, target);
-            System.Console.WriteLine(calc);
+            CallLevenstheinCalc(reference, target);
         }
 
         private object CallLevenstheinCalc(string reference, List<string> target)
         {
-            var levenCalc = new Logic(reference, target);
-            return levenCalc.Calculate(reference, target);
+
+            var levenLogic = new Logic(reference, target);
+            return levenLogic.Calculate(reference, target);
         }
     };
 
