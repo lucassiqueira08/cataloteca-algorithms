@@ -18,11 +18,22 @@ namespace Algorithms
                 "Abracadeira Regulavel Rosca Sem Fim Faixa Regulagem 25-38Mm Aco Sae 1020"
             });
 
-            string string1 = "Abracadeira Regulavel";
-            var input = new Input(string1, productsList);
+            string reference = "Abracadeira Regulavel";
+            var response = new Entrypoint();
+            response.callLeven(reference, productsList);
         }
     }
 
+    public class Entrypoint
+    {
+        public object callLeven(string reference, List<string> productsList)
+        {
+            var data = new Input(reference, productsList);
+            return data.CallLevenstheinCalc();
+
+        }
+
+    }
 
     // PROGRAMA FUNCIONANDO:
     //public static class Program

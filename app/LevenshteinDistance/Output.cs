@@ -5,17 +5,25 @@ using level.app.LevenshteinDistance;
 
 namespace level.app.LevenshteinDistance
 {
-    class Output
+    public class Output
     {
-        private readonly string reference;
-        private List<ModelLev> results;
+        public string reference;
+        private List<ModelLev> result;
 
-        public Output(string reference, List<ModelLev> results)
+        public Output(string reference, List<ModelLev> result)
         {
             this.reference = reference;
-            this.results = results;
-            Console.WriteLine(reference);
-            results.ForEach(Console.WriteLine);
+            this.result = result;
         }
+
+        public object Response()
+        {
+            var response = new ModelResponse();
+            response.reference = reference;
+            response.results = result;
+
+            return response;
+        }
+
     }
 }

@@ -21,7 +21,6 @@ namespace level.app.LevenshteinDistance
             var calculator = new Calc();
             List<ModelLev> result = new List<ModelLev>();
 
-            Console.WriteLine("Ambos");
             Console.WriteLine("--------------------");
             foreach (string element in target)
             {
@@ -32,11 +31,12 @@ namespace level.app.LevenshteinDistance
                 var model = new ModelLev();
                 model.distance = distance;
                 model.similarity = similarity;
+                model.target = element;
 
                 result.Add(model);
             }
             var output = new Output(reference, result);
-            return output;
+            return output.Response();
             // Retorna distancia e similaridade das strings
         }
 
@@ -59,7 +59,7 @@ namespace level.app.LevenshteinDistance
             }
             // Retorna distancia das strings
             var output = new Output(reference, result);
-            return output;
+            return output.Response();
         }
 
         public object Similarity(string reference, List<string> target)
@@ -84,7 +84,7 @@ namespace level.app.LevenshteinDistance
             }
             // Retorna similaridade das strings
             var output = new Output(reference, result);
-            return output;
+            return output.Response();
         }
 
         public double GetDivisor(string reference, string element)
