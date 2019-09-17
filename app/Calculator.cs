@@ -1,11 +1,8 @@
 ﻿using DuoVia.FuzzyStrings;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace level.app.LevenshteinDistance
+namespace cataloteca.algorithms.LevenshteinDistance
 {
-    class Calc
+    class Calculator
     {
 
         public double Similarity(double distance, double divisor)

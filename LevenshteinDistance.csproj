@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AssemblyName>cataloteca.LevenshteinDistance</AssemblyName>
+    <RootNamespace>cataloteca.LevenshteinDistance</RootNamespace>
+    <Authors>Lucas Alves Siqueira</Authors>
+    <Company>Level</Company>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DuoVia.FuzzyStrings" Version="2.0.1" />
+    <PackageReference Include="Microsoft.ML" Version="1.3.1" />
+  </ItemGroup>
+
+</Project>

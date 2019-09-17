@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace level.app.LevenshteinDistance
+namespace cataloteca.algorithms.LevenshteinDistance
 {
     public class Input {
 
@@ -13,22 +13,22 @@ namespace level.app.LevenshteinDistance
             this.target = target;
         }
 
-        public object CallLevenstheinCalc()
+        public Response CallLevenstheinCalc()
         {
             var levenLogic = new Logic(reference, target);
-            return levenLogic.Calculate(reference, target);
+            return levenLogic.Calculate();
         }
 
-        public object CallLevenstheinSimilarity()
+        public Response CallLevenstheinSimilarity()
         {
             var levenLogic = new Logic(reference, target);
-            return levenLogic.Similarity(reference, target);
+            return levenLogic.Similarity();
         }
 
-        public object CallLevenstheinDistance()
+        public Response CallLevenstheinDistance()
         {
             var levenLogic = new Logic(reference, target);
-            return levenLogic.Distance(reference, target);
+            return levenLogic.Distance();
         }
     };
 
