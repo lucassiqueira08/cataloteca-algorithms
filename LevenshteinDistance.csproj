@@ -1,12 +1,18 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <AssemblyName>cataloteca.LevenshteinDistance</AssemblyName>
     <RootNamespace>cataloteca.LevenshteinDistance</RootNamespace>
     <Authors>Lucas Alves Siqueira</Authors>
-    <Company>Level</Company>
+    <Company>LevelGroup</Company>
+    <Description>Algorithm used to calculate the distance and similarity between two strings.</Description>
+    <PackageId>cataloteca.LevenshteinDistance</PackageId>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <ApplicationIcon />
+    <StartupObject />
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
   <ItemGroup>

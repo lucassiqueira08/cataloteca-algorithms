@@ -25,13 +25,13 @@ Algorithm used to calculate the distance and similarity between two strings.
         "example 3"
     });
 ```
-**Choose the method to call:**
-	- Use the method to calculate distance and similarity.
+
+- Use the method to calculate distance and similarity. By default the method returns the distance and similarity values, but you may not return one of the metrics
 ```csharp
 
 	// Method that calculates string distance and similarity
     var bothCalc = new LevenshteinInput(reference, productsList);
-    var data = bothCalc.CallLevenstheinCalc();
+    var data = bothCalc.CallLevenstheinCalc(similarity:true, distance:true);
 
 	// Console Response Sample
 
@@ -51,7 +51,7 @@ Algorithm used to calculate the distance and similarity between two strings.
 
 	// Method that calculates similarity only
 		var similarityCalc = new LevenshteinInput(reference, productsList);
-		var data = similarityCalc.CallLevenstheinSimilarity();
+		var data = similarityCalc.CallLevenstheinCalc(similarity:true, distance:false);
 
 
 	// Console Response Sample
@@ -73,7 +73,7 @@ Algorithm used to calculate the distance and similarity between two strings.
 ```csharp
 	// Method that calculates only the distance
 	var distanceCalc = new LevenshteinInput(reference, productsList);
-	var data = distanceCalc.CallLevenstheinDistance();
+	var data = distanceCalc.CallLevenstheinCalc(similarity:false, distance:true);
 
 	// Console Response Sample
 

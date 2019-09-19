@@ -3,20 +3,31 @@ using System.Collections.Generic;
 
 namespace cataloteca.algorithms.LevenshteinDistance
 {
-    public class LevenshteinLogic
+    internal class LevenshteinLogic
     {
         private readonly string _reference = string.Empty;
         private readonly List<string> _target;
         private double _divisor;
 
-        public LevenshteinLogic(string reference, List<string> target)
+        /// <summary>
+        /// Responsible for the logic of calculation
+        /// </summary>
+        /// <param name="reference"></param>
+        /// <param name="target"></param>
+        internal LevenshteinLogic(string reference, List<string> target)
         {
-            this._reference = reference;
-            this._target = target;
+            _reference = reference;
+            _target = target;
 
         }
 
-        public Response Calculate()
+        /// <summary>
+        ///  Responsible for calling the distance and similarity calculation and setting the response
+        /// </summary>
+        /// <param name="distance"></param>
+        /// <param name="similarity"></param>
+        /// <returns></returns>
+        internal Response Calculate(bool distance = true, bool similarity = true)
         {
             var calculator = new LevenshteinCalculator();
             List<Metrics> result = new List<Metrics>();
@@ -24,69 +35,38 @@ namespace cataloteca.algorithms.LevenshteinDistance
             foreach (string element in _target)
             {
                 _divisor = GetDivisor(_reference, element);
-                var distance = calculator.Distance(_reference, element);
-                var similarity = calculator.Similarity(distance, _divisor);
+                var distanceValue = calculator.Distance(_reference, element);
+                var similarityValue = calculator.Similarity(distanceValue, _divisor);
 
                 var model = new Metrics
                 {
-                    Distance = distance,
-                    Similarity = similarity,
                     Target = element
                 };
 
-                result.Add(model);
-            }
-            var output = new LevenshteinOutput(_reference, result);
-            return output.Response();
-        }
-
-        public Response Distance()
-        {
-            var calculator = new LevenshteinCalculator();
-            var result = new List<Metrics>();
-
-            foreach (string element in _target)
-            {
-                _divisor = GetDivisor(_reference, element);
-
-                var distance = calculator.Distance(_reference, element);
-
-                var model = new Metrics
+                if (distance)
                 {
-                    Distance = distance
-                };
+                    model.Distance = distanceValue;
+                }
 
-                result.Add(model);
-            }
-            var output = new LevenshteinOutput(_reference, result);
-            return output.Response();
-        }
-
-        public Response Similarity()
-        {
-            var calculator = new LevenshteinCalculator();
-            var result = new List<Metrics>();
-
-            foreach (string element in _target)
-            {
-
-                _divisor = GetDivisor(_reference, element);
-
-                var distance = calculator.Distance(_reference, element);
-                var similarity = calculator.Similarity(distance, _divisor);
-
-                var model = new Metrics
+                if (similarity)
                 {
-                    Similarity = similarity
-                };
+                    model.Similarity = similarityValue;
+                }
+
 
                 result.Add(model);
             }
             var output = new LevenshteinOutput(_reference, result);
             return output.Response();
         }
-
-        public double GetDivisor(string reference, string element)
+ 
+        /// <summary>
+        /// Responsible for obtaining the divisor used to calculate similarity
+        /// </summary>
+        /// <param name="reference"></param>
+        /// <param name="element"></param>
+        /// <returns>A divisor value converted to double</returns>
+        internal double GetDivisor(string reference, string element)
         {
             if (reference.Length > element.Length)
             {
