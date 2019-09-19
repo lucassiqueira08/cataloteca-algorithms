@@ -77,7 +77,6 @@ namespace cataloteca.algorithms.LevenshteinDistance
 
                 var model = new Metrics
                 {
-                    Distance = distance,
                     Similarity = similarity
                 };
 

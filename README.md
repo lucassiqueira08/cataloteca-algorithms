@@ -25,20 +25,68 @@ Algorithm used to calculate the distance and similarity between two strings.
         "example 3"
     });
 ```
-- Choose the method to call.
+- Choose the method to call:
+	- Use the method to calculate distance and similarity.
 ```csharp
 
 	// Method that calculates string distance and similarity
     var bothCalc = new LevenshteinInput(reference, productsList);
     var data = bothCalc.CallLevenstheinCalc();
 
-	// Method that calculates similarity only
-    var similarityCalc = new LevenshteinInput(reference, productsList);
-    var data = similarityCalc.CallLevenstheinSimilarity();
+	// Console Response Sample
 
-	// Method that calculates only the distance
-    var distanceCalc = new LevenshteinInput(reference, productsList);
-    var data = distanceCalc.CallLevenstheinDistance();
+	// example
+	// -------------------
+	// example 1
+	// Distance: 2,00 | Similarity: 77,78%
+
+	// example 2
+	// Distance: 2,00 | Similarity: 77,78%
+
+	// example 3
+	// Distance: 2,00 | Similarity: 77,78%
 ```
+	- Use the method to calculate similarity only
+```csharp
 
+	// Method that calculates similarity only
+		var similarityCalc = new LevenshteinInput(reference, productsList);
+		var data = similarityCalc.CallLevenstheinSimilarity();
+
+
+	// Console Response Sample
+
+	// example
+	// -------------------
+	// example 1
+	 Similarity: 77,78%
+
+	// example 2
+	Similarity: 77,78%
+
+	// example 3
+	Similarity: 77,78%
+
+```
+	- Use the method to calculate distance only
+
+```csharp
+	// Method that calculates only the distance
+	var distanceCalc = new LevenshteinInput(reference, productsList);
+	var data = distanceCalc.CallLevenstheinDistance();
+
+	// Console Response Sample
+
+	// example
+	// -------------------
+	// example 1
+	// Distance: 2,00
+
+	// example 2
+	// Distance: 2,00
+
+	// example 3
+	// Distance: 2,00
+
+```
 **Author: Lucas Alves Siqueira**

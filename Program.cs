@@ -19,13 +19,13 @@ namespace cataloteca
             string reference = "example";
 
 
-            var bothCalc = new LevenshteinInput(reference, productsList);
-            var data = bothCalc.CallLevenstheinCalc();
+            //var bothCalc = new LevenshteinInput(reference, productsList);
+            //var data = bothCalc.CallLevenstheinCalc();
 
-            //var similarityCalc = new Input(reference, productsList);
-            //var data = similarityCalc.CallLevenstheinSimilarity();
+            var similarityCalc = new LevenshteinInput(reference, productsList);
+            var data = similarityCalc.CallLevenstheinSimilarity();
 
-            //var distanceCalc = new Input(reference, productsList);
+            //var distanceCalc = new LevenshteinInput(reference, productsList);
             //var data = distanceCalc.CallLevenstheinDistance();
 
             Console.WriteLine(data.Reference);
