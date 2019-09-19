@@ -25,7 +25,7 @@ Algorithm used to calculate the distance and similarity between two strings.
         "example 3"
     });
 ```
-- Choose the method to call:
+**Choose the method to call:**
 	- Use the method to calculate distance and similarity.
 ```csharp
 
@@ -59,13 +59,13 @@ Algorithm used to calculate the distance and similarity between two strings.
 	// example
 	// -------------------
 	// example 1
-	 Similarity: 77,78%
+	// Similarity: 77,78%
 
 	// example 2
-	Similarity: 77,78%
+	// Similarity: 77,78%
 
 	// example 3
-	Similarity: 77,78%
+	// Similarity: 77,78%
 
 ```
 	- Use the method to calculate distance only
