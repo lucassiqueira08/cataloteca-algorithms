@@ -2,12 +2,12 @@
 
 namespace cataloteca.algorithms.LevenshteinDistance
 {
-    public class Output
+    public class LevenshteinOutput
     {
         private string _reference;
         private List<Metrics> _result;
 
-        public Output(string reference, List<Metrics> result)
+        public LevenshteinOutput(string reference, List<Metrics> result)
         {
             this._reference = reference;
             this._result = result;

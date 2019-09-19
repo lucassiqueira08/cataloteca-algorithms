@@ -1,8 +1,9 @@
-﻿using System;
+﻿using cataloteca.algorithms.LevenshteinDistance;
+using System;
 using System.Collections.Generic;
 
 
-namespace cataloteca.algorithms.LevenshteinDistance
+namespace cataloteca
 {
     public static class Program
     {
@@ -10,15 +11,15 @@ namespace cataloteca.algorithms.LevenshteinDistance
         {
 
             List<string> productsList = new List<string>(new string[] {
-                "abracadeira regulavel tipo rosca sem fim faixa regulagem 14-22mm largura fita 9mm espessura 0.7mm aco sae 1020 acabamento galvanizado eletrolitico",
-                "abracadeira regulavel rosca sem fim faixa regulagem 19-38mm aco inox aisi 316",
-                "abracadeira regulavel rosca sem fim faixa regulagem 25-38mm aco sae 1020"
+        "example 1",
+        "example 2",
+        "example 3"
             });
 
-            string reference = "abracadeira regulavel";
+            string reference = "example";
 
 
-            var bothCalc = new Input(reference, productsList);
+            var bothCalc = new LevenshteinInput(reference, productsList);
             var data = bothCalc.CallLevenstheinCalc();
 
             //var similarityCalc = new Input(reference, productsList);

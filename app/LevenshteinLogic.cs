@@ -3,13 +3,13 @@ using System.Collections.Generic;
 
 namespace cataloteca.algorithms.LevenshteinDistance
 {
-    public class Logic
+    public class LevenshteinLogic
     {
         private readonly string _reference = string.Empty;
         private readonly List<string> _target;
         private double _divisor;
 
-        public Logic(string reference, List<string> target)
+        public LevenshteinLogic(string reference, List<string> target)
         {
             this._reference = reference;
             this._target = target;
@@ -18,7 +18,7 @@ namespace cataloteca.algorithms.LevenshteinDistance
 
         public Response Calculate()
         {
-            var calculator = new Calculator();
+            var calculator = new LevenshteinCalculator();
             List<Metrics> result = new List<Metrics>();
 
             foreach (string element in _target)
@@ -36,13 +36,13 @@ namespace cataloteca.algorithms.LevenshteinDistance
 
                 result.Add(model);
             }
-            var output = new Output(_reference, result);
+            var output = new LevenshteinOutput(_reference, result);
             return output.Response();
         }
 
         public Response Distance()
         {
-            var calculator = new Calculator();
+            var calculator = new LevenshteinCalculator();
             var result = new List<Metrics>();
 
             foreach (string element in _target)
@@ -58,13 +58,13 @@ namespace cataloteca.algorithms.LevenshteinDistance
 
                 result.Add(model);
             }
-            var output = new Output(_reference, result);
+            var output = new LevenshteinOutput(_reference, result);
             return output.Response();
         }
 
         public Response Similarity()
         {
-            var calculator = new Calculator();
+            var calculator = new LevenshteinCalculator();
             var result = new List<Metrics>();
 
             foreach (string element in _target)
@@ -83,7 +83,7 @@ namespace cataloteca.algorithms.LevenshteinDistance
 
                 result.Add(model);
             }
-            var output = new Output(_reference, result);
+            var output = new LevenshteinOutput(_reference, result);
             return output.Response();
         }
 

@@ -2,12 +2,13 @@
 
 namespace cataloteca.algorithms.LevenshteinDistance
 {
-    public class Input {
+    public class LevenshteinInput
+    {
 
         public string reference = string.Empty;
         public List<string> target;
 
-        public Input(string reference, List<string> target)
+        public LevenshteinInput(string reference, List<string> target)
         {
             this.reference = reference;
             this.target = target;
@@ -15,19 +16,19 @@ namespace cataloteca.algorithms.LevenshteinDistance
 
         public Response CallLevenstheinCalc()
         {
-            var levenLogic = new Logic(reference, target);
+            var levenLogic = new LevenshteinLogic(reference, target);
             return levenLogic.Calculate();
         }
 
         public Response CallLevenstheinSimilarity()
         {
-            var levenLogic = new Logic(reference, target);
+            var levenLogic = new LevenshteinLogic(reference, target);
             return levenLogic.Similarity();
         }
 
         public Response CallLevenstheinDistance()
         {
-            var levenLogic = new Logic(reference, target);
+            var levenLogic = new LevenshteinLogic(reference, target);
             return levenLogic.Distance();
         }
     };

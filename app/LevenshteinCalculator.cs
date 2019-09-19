@@ -2,7 +2,7 @@
 
 namespace cataloteca.algorithms.LevenshteinDistance
 {
-    class Calculator
+    class LevenshteinCalculator
     {
 
         public double Similarity(double distance, double divisor)
