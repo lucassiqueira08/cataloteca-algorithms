@@ -1,7 +1,3 @@
-# Cataloteca Algorithms
-
-Library with machine learning algorithms from the 'cataloteca' project.
-
 ## Levenshtein Distance
 Algorithm used to calculate the distance and similarity between two strings.
 
@@ -89,4 +85,3 @@ Algorithm used to calculate the distance and similarity between two strings.
 	// Distance: 2,00
 
 ```
-**Author: Lucas Siqueira**
