@@ -49,8 +49,9 @@ namespace cataloteca.algorithms.LevenshteinDistance
                 }
 
                 if (similarity)
-                {
-                    model.Similarity = similarityValue;
+                {   
+                    // TODO: Converter para duas casas decimais
+                    model.Similarity = Math.Round(similarityValue, 2);
                 }
 
 

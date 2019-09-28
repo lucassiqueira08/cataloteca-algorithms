@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AssemblyName>cataloteca.LevenshteinDistance</AssemblyName>
+    <RootNamespace>cataloteca.LevenshteinDistance</RootNamespace>
+    <Authors>Lucas Alves Siqueira</Authors>
+    <Company>LevelGroup</Company>
+    <Description>Algorithm used to calculate the distance and similarity between two strings.</Description>
+    <PackageId>cataloteca.LevenshteinDistance</PackageId>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <ApplicationIcon />
+    <StartupObject />
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DuoVia.FuzzyStrings" Version="2.0.1" />
+  </ItemGroup>
+
+</Project>
